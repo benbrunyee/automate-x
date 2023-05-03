@@ -1,12 +1,11 @@
 <script>
 	import Icon from '@iconify/svelte';
-	import Button from '../components/Buttons/Button.svelte';
 
 	import Card from '../components/Card.svelte';
 </script>
 
 <div
-	class="relative flex flex-col items-center justify-center bg-slate-100 px-4 py-4 transition-all duration-500 md:my-0 md:px-5 md:pt-52 md:pb-44"
+	class="relative flex flex-col items-center justify-center px-4 py-4 transition-all duration-500 md:my-0 md:px-5 md:pb-44 md:pt-52"
 >
 	<div class="flex w-full flex-1 flex-col items-center md:absolute md:-translate-y-[13%]">
 		<div class="cards flex w-full flex-1 flex-row gap-4 overflow-x-auto md:gap-10 md:px-10">
@@ -49,13 +48,7 @@
 			</Card>
 		</div>
 		<div class="relative -translate-y-1/4 md:-translate-y-1/2">
-			<Button
-				href="/"
-				text="Get Started!"
-				onClick={() => {
-					window.scrollTo({ top: 0, behavior: 'smooth' });
-				}}
-			/>
+			<a href="/" class="btn variant-filled">Get Started!</a>
 		</div>
 	</div>
 </div>

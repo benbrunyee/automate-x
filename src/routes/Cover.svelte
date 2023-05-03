@@ -1,43 +1,41 @@
 <script lang="ts">
 	import Icon from '@iconify/svelte';
 
-	import Button from '../components/Buttons/Button.svelte';
 	import { handleScroll } from '../util/util';
-
-	export let isScrolled = false;
 </script>
 
 <div
 	class="flex flex-col items-center justify-center p-10 px-6 md:flex-row md:p-0 md:px-40 md:pb-20 md:pt-10"
 >
 	<div
-		class={`z-10 flex flex-col items-center justify-center transition-all duration-500 ease-out md:flex-1 md:items-start ${
-			isScrolled ? 'invert' : ''
-		}`}
+		class="z-10 flex flex-col items-center justify-center transition-all duration-500 ease-out md:flex-1 md:items-start"
 	>
-		<h1
-			class="select-none text-center text-5xl leading-[0.9] tracking-tighter md:text-left md:text-8xl"
-		>
-			Automate X...<br />With Ease
+		<h1 class="select-none text-center leading-[0.9] tracking-tighter md:text-left">
+			Meaningful<br />Web Automation
 		</h1>
 		<div class="mt-4 flex flex-col items-center md:flex-row">
-			<Button
+			<!-- <Button
 				onClick={(e) => handleScroll(e, '#whats-possible')}
 				text="What's Possible?"
-				class="mb-2 md:mr-4 md:mb-0"
-			/>
-			<Button href="/" text="Get Started!" />
+				class="mb-2 md:mb-0 md:mr-4"
+			/> -->
+			<button
+				on:click={(e) => handleScroll(e, '#whats-possible')}
+				class="btn variant-filled mb-2 md:mb-0 md:mr-4">What's Possible!</button
+			>
+			<!-- <Button href="/" text="Get Started!" /> -->
+			<a href="/" class="btn variant-filled">Get Started!</a>
 			<div class="mt-2 flex md:mt-0">
 				<Icon
 					icon="ph:arrow-arc-left-light"
-					class="ml-4 hidden translate-y-1/2 scale-x-125 -scale-y-100 text-4xl md:block"
+					class="ml-4 hidden translate-y-1/2 -scale-y-100 scale-x-125 text-4xl md:block"
 				/>
 				<span class="md:-translate-x-[20px]">No Card Required!</span>
 			</div>
 		</div>
 	</div>
 	<div
-		class="absolute top-0 left-0 flex h-full flex-1 items-center justify-center p-10 opacity-25 md:static md:p-0 md:opacity-100"
+		class="absolute left-0 top-0 flex h-full flex-1 items-center justify-center p-10 opacity-25 md:static md:p-0 md:opacity-100"
 	>
 		<img
 			src="/ai_man.png"

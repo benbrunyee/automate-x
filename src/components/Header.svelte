@@ -8,7 +8,7 @@
 <svelte:window bind:scrollY bind:outerWidth />
 
 <div
-	class={`fixed top-0 z-50 flex h-[90px] w-full items-center overflow-hidden bg-transparent px-6 transition-all ${
+	class={`fixed top-0 z-50 flex h-[90px] w-full items-center overflow-hidden bg-primary-50 px-6 transition-all ${
 		isScrolled ? 'bg-light-body shadow-md' : ''
 	}`}
 >
